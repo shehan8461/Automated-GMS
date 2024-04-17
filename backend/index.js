@@ -3,6 +3,8 @@ const cors=require("cors")
 const mongoose=require("mongoose")
 const MarketingFeedbackRoutes = require("./routes/MarketingFeedbackRoutes");
 const MarketingDiscountRoutes = require("./routes/MarketingDiscuntRoutes");
+const SupplerRoutes = require("./routes/SupplierRotes");
+const Supplier_orderRoutes = require("./routes/supplier_orderRoutes");
 
 
 const app=express()
@@ -11,6 +13,8 @@ app.use(cors())
 app.use(express.json())
 app.use("/", MarketingFeedbackRoutes);
 app.use("/", MarketingDiscountRoutes);
+app.use("/", SupplerRoutes);
+app.use("/", Supplier_orderRoutes);
 
 
 const PORT=process.env.PORT||8060
