@@ -6,6 +6,7 @@ const MarketingDiscountRoutes = require("./routes/MarketingDiscuntRoutes");
 const SupplerRoutes = require("./routes/SupplierRotes");
 const Supplier_orderRoutes = require("./routes/supplier_orderRoutes");
 const stockRouter = require("./routes/stockRouter.js");
+const SalesRoutes = require("./routes/salesroutes.js");
 
 const app=express()
 
@@ -16,6 +17,7 @@ app.use("/", MarketingDiscountRoutes);
 app.use("/", SupplerRoutes);
 app.use("/", Supplier_orderRoutes);
 app.use("/stock", stockRouter);
+app.use("/", SalesRoutes);
 
 
 const PORT=process.env.PORT||8060
