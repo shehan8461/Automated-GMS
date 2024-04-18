@@ -8,6 +8,8 @@ const SupplerRoutes = require("./routes/SupplierRotes");
 const Supplier_orderRoutes = require("./routes/supplier_orderRoutes");
 const stockRouter = require("./routes/stockRouter.js");
 const SalesRoutes = require("./routes/salesroutes.js");
+const transportsRoute = require("./routes/transportsRoute.js");
+const vehiclesRoute = require("./routes/vehiclesRoute.js");
 //HR import statements begins
 const authRoutes_HR = require("./routes/authRoutes_HR");
 const userRoutes_HR = require("./routes/userRoutes_HR");
@@ -59,6 +61,9 @@ app.use("/api_HR/evaluations", evaluationRoutes);
 app.use("/api_HR/payrolls", payrollRoutes);
 app.use("/api_HR/trainings", trainingRoutes);
 //Hr routes are over
+
+app.use("/transports", transportsRoute); // Use '/transports' for transport routes
+app.use("/vehicles", vehiclesRoute); // Use '/vehicles' for vehicle routes
 
 
 const PORT=process.env.PORT||8060
