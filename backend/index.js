@@ -1,3 +1,4 @@
+require("dotenv").config();//added by Himansa
 const express=require("express")
 const cors=require("cors")
 const mongoose=require("mongoose")
@@ -7,6 +8,24 @@ const SupplerRoutes = require("./routes/SupplierRotes");
 const Supplier_orderRoutes = require("./routes/supplier_orderRoutes");
 const stockRouter = require("./routes/stockRouter.js");
 const SalesRoutes = require("./routes/salesroutes.js");
+//HR import statements begins
+const authRoutes = require("./routes/authRoutes_HR");
+const userRoutes = require("./routes/userRoutes_HR");
+const evaluationRoutes = require("./routes/evaluationRoutes_HR");
+const payrollRoutes = require("./routes/payrollRoutes_HR");
+const trainingRoutes = require("./routes/trainingRoutes_HR");
+
+//HR import statements end
+
+//HR DEpartment----------------------
+
+// --------------------Automatic Payroll_Generation
+
+// Import the cron job function
+const generatePayroll = require("./util_HR/scheduled_tasks/cronJobs");
+// Call the function to schedule the tasks
+generatePayroll();
+//HR DEpartment ends----------------------
 
 const app=express()
 
@@ -18,6 +37,13 @@ app.use("/", SupplerRoutes);
 app.use("/", Supplier_orderRoutes);
 app.use("/stock", stockRouter);
 app.use("/", SalesRoutes);
+//HR routes 
+app.use("/auth_HR", authRoutes);
+app.use("/api_HR/users", userRoutes);
+app.use("/api_HR/evaluations", evaluationRoutes);
+app.use("/api_HR/payrolls", payrollRoutes);
+app.use("/api_HR/trainings", trainingRoutes);
+//Hr routes are over
 
 
 const PORT=process.env.PORT||8060
