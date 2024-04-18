@@ -1,0 +1,6 @@
+const USER_ROLES = {
+  ORDER_MANAGER: "ORDER_MANAGER",
+  CUSTOMER: "CUSTOMER",
+};
+
+module.exports = USER_ROLES;
