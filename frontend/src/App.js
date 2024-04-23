@@ -11,6 +11,7 @@ import Adddiscount from './discount_componenet/adddiscount';
 import UpdateDiscount from './discount_componenet/updatediscount';
 import DiscountDashboard from './discount_componenet/discount_dashboard';
 import DiscountDetails from './discount_componenet/discountdetails';
+import MainPage from './MainPageComponent/MainPage';
 
 
 
@@ -21,22 +22,25 @@ function App() {
     <Router>
     <div className="App">
     
-<Header/>
+
 
 
       <Routes>
-   
-      <Route path="/"  element={<div> <UserDashBoard/><DiscountDashboard/> </div>}> </Route>
+       
+      <Route path="/" element={ <MainPage/>}> </Route>
+
+      
+      <Route path="/marketing"  element={<div><Header/> <UserDashBoard/><DiscountDashboard/> </div>}> </Route>
     
 
-      <Route path="/feedback_details" element={<FeedbackDetails/>}> </Route>
-      <Route path="/add_feedback" element={<AddFeedback/>}></Route>
+      <Route path="/feedback_details" element={<div> <Header/><FeedbackDetails/></div>}> </Route>
+      <Route path="/add_feedback" element={<div> <Header/><AddFeedback/></div>}></Route>
      
 
 
-      <Route path="/add_discount" element={<Adddiscount/>}></Route>
-      <Route path="/discountdetails" element={<DiscountDetails/>}></Route>
-      <Route path="/update_discount/:id" element={<UpdateDiscount/>}></Route>
+      <Route path="/add_discount" element={<div> <Header/><Adddiscount/></div>}></Route>
+      <Route path="/discountdetails" element={<div> <Header/><DiscountDetails/></div>}></Route>
+      <Route path="/update_discount/:id" element={<div> <Header/><UpdateDiscount/></div>}></Route>
   
    
       </Routes>
