@@ -1,7 +1,7 @@
 const mongoose=require("mongoose")
 
 
-const discount=mongoose.Schema({
+const discountschema=mongoose.Schema({
     item:String,
     prize:Number,
     dis:Number
@@ -13,6 +13,6 @@ const discount=mongoose.Schema({
  
  })
  
- const discountmodel=mongoose.model("discount",discount)
+ const discountmodel=mongoose.model("discount",discountschema)
 
  module.exports=discountmodel;

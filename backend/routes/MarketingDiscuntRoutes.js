@@ -34,7 +34,7 @@ res.send({success:true,message:"deleted successfully",data:data})
 })
 
 
-//discount update
+//discount updated
 router.get("/discount/:id", async (req, res) => {
     const id = req.params.id;
 
