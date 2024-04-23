@@ -1,0 +1,58 @@
+/* headerStyle.css */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #000000;
+  margin-left: 250px;
+}
+
+.menu-container {
+  display: flex;
+  align-items: flex-end; /* Align items to the bottom */
+}
+
+.menu {
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 20px;
+}
+
+li {
+  margin-left: 20px;
+  margin-bottom: 10px; /* Add margin bottom for space between boxes */
+  background-color: #1c8be5; /* Set blue background color */
+  padding: 10px; /* Add padding for space */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+.menu a {
+  color: #fff; /* Change text color to white */
+  text-decoration: none;
+}
+
+
+
+.lnk {
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.li:hover{
+  background-color: #000000;
+}

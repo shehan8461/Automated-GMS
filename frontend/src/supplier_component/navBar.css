@@ -1,0 +1,56 @@
+/* navBar.css */
+
+.navbar1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 180px;
+    background-color: #1c8be5;
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.topic {
+    position: absolute;
+    top: 120px;
+    left: 3%;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.navbar1 img {
+    
+    width: 150px; /* Increase the width of the logo */
+    margin-top: 10px;
+}
+
+.navbar1 a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding: 7px;
+    margin-left: 1px;
+    margin-top: 40px;
+    
+    font-weight: bold;
+}
+
+.navbar1 a:hover {
+    background-color: #555;
+    text-decoration: underline;
+}
+
+.logoutBtn {
+    background-color: rgb(7, 33, 57);
+}
+
+.logoutBtn:hover {
+    background-color: #fff;
+    color: black;
+}
