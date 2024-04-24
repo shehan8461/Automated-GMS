@@ -58,7 +58,8 @@ function AddFeedback() {
     };
 
     return (
-        <body className='feedback-background'>
+        <div>
+        <body className='background-marketing'>
             <p className='navbarfeedback'>
                 <h3>Seylin Clothes (PVT)</h3>
                 <img src={logo} alt="Logo" />
@@ -84,8 +85,11 @@ function AddFeedback() {
                     <br />
                     <button type="submit">Submit</button>
                 </form>
+                </div>
+                </body>
+                
             </div>
-        </body>
+      
     );
 }
 
