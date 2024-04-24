@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import './discount.css';
+import './adddiscount.css';
 
 function AddDiscount() {
     const [discount, setDiscount] = useState({
@@ -47,6 +47,7 @@ function AddDiscount() {
 
     return (
         <div className="add-discount">
+                <body className='background-marketing'>
             <form onSubmit={handleSubmit}>
                 <label>Item:</label>
                 <input type="text" id="item" name="item" onChange={handleOnChange} /><br />
@@ -57,6 +58,7 @@ function AddDiscount() {
                 <button>Add Discount</button>
             </form><br />
             <button id="dis-btn"><a href="discountdetails">Show Discount Items</a></button>
+            </body>
         </div>
     );
 }

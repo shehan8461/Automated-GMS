@@ -1,6 +1,6 @@
 import  { useEffect, useState } from 'react'
 import axios from "axios"
-import './userdetails.css'
+import './feedbackdetails.css'
 
 
 function FeedbackDetails(){
@@ -50,9 +50,12 @@ const filterdata = (searchKey) => {
 
 
 return(
+    <div>
+          <body className='background-marketing'>
     <div className="userdetails">
+  
 <div className='searchbtn'>
-        <input  type="search" onChange={(e)=>setsearchkey(e.target.value)} placeholder='search' className='in'/><br></br>
+        <input  type="search" onChange={(e)=>setsearchkey(e.target.value)} placeholder='customer name' className='in'/><br></br>
         <button  id='search-btn'  onClick={(e)=>handlesearch(e)}> search </button>
         </div>   
             <table>
@@ -92,6 +95,8 @@ return(
                             }
                         </tbody>
             </table>
+            </div>
+            </body>
     </div>
 )
 }

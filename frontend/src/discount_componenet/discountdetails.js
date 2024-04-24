@@ -1,6 +1,6 @@
 import  { useEffect, useState ,useRef} from 'react'
 import axios from "axios"
-import './showdiscount.css'
+import './discountdetails.css'
 import {useReactToPrint} from "react-to-print";
 
 function DiscountDetails(){
@@ -40,6 +40,7 @@ const generatePDF=useReactToPrint({
 })
     return(
         <div className="showdiscount">
+               <body className='background-marketing'>
             <div ref={componentPDF} style={{width:'100%'}}>
  <table>
               
@@ -75,7 +76,8 @@ const generatePDF=useReactToPrint({
               </tbody>
   </table>
   </div>
-  <button onClick={generatePDF}>PDF</button>
+  <button id="btnreport" onClick={generatePDF}>Download Report</button>
+  </body>
         </div>
     )
 }
