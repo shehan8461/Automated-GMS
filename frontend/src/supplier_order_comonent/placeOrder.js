@@ -117,6 +117,9 @@ function PlaceOrder() {
     };
 
     return (
+        <div>
+            <body className='supplier_background'>
+        
         <div className="order-form">
             <form onSubmit={handleSubmit}>
                 <h2>Place New Order</h2>
@@ -166,6 +169,8 @@ function PlaceOrder() {
                 <br /><br /><br />
                 <button className='orderbtn'>Send Order</button>
             </form>
+        </div>
+        </body>
         </div>
     );
 }

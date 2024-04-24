@@ -107,6 +107,7 @@ function AddSupplier() {
 
     return (
         <div>
+            <body className='supplier_background'>
             <div className="container-form">
                 <form onSubmit={handleSubmit}>
                     <div>
@@ -253,6 +254,7 @@ function AddSupplier() {
                     </center>
                 </form>
             </div>
+            </body>
         </div>
     );
 }

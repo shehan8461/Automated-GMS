@@ -1,6 +1,6 @@
 
 
-body::before {
+.supplier_background::before {
   content: '';
   position: fixed;
   top: 0;
