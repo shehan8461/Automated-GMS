@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from "axios";
-import './adduser.css';
+import './addfeddback.css';
 import logo from './selyn-high-resolution-logo-transparent(2).png';
 
 function AddFeedback() {
