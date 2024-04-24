@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from "axios"
 
+
 function SupplierDashBoard(){
     const [countlist, setcountlist]=useState([]);
     const [supplierlist, setsupplierlist]=useState([]);
@@ -23,6 +24,8 @@ useEffect(()=>{
 return(
     <div>
         <body className='supplier_background'>
+
+            <div className="box">
         <h1>Total Suppliers:</h1>
             {countlist !== null ? (
                 <p>Total suppliers: {countlist}</p>
@@ -41,6 +44,7 @@ return(
                 )
             })
            }
+           </div>
            </body>
     </div>
 )

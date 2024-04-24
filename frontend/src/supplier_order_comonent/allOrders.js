@@ -1,6 +1,6 @@
 import {useState,useEffect } from 'react'
 import axios  from 'axios'
-
+import "./allOrders.css";
 
 
 function AllOrders(){
@@ -59,7 +59,7 @@ const getData = (searchbtn)=>{
     <body className='supplier_background'>
         <div className="container">
             <input
-              className="srchinput"
+              id="srchinput"
               type="search"
               onChange={(e)=>setSearchBtn(e.target.value)}
               placeholder="Search"
