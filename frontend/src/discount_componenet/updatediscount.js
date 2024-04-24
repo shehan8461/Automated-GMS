@@ -68,7 +68,7 @@ function UpdateDiscount(){
 
     return(
         <div className='discount-update'>
-
+   <body className='background-marketing'>
 
     <lable>Item:</lable>
     <input type="text" id="item" name="item" onChange={handleInputChange} value={updatediscount?.item }/><br></br>
@@ -83,7 +83,7 @@ function UpdateDiscount(){
   
     <button onClick={handleUpdate} >Update</button><br></br> <br></br> 
     <button><a href='/show_discounts'>Discount List</a></button>
- 
+    </body>
         </div>
     )
 }
