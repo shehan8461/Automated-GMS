@@ -16,7 +16,7 @@
 
 .topic {
     position: absolute;
-    top: 120px;
+    top: 140px;
     left: 3%;
     padding: 10px;
     padding-bottom: 20px;
@@ -47,10 +47,18 @@
 }
 
 .logoutBtn {
+    position: absolute;
     background-color: rgb(7, 33, 57);
+    bottom: 5%;
+    width: 130px;
 }
 
 .logoutBtn:hover {
     background-color: #fff;
     color: black;
+}
+
+#logo{
+    position: absolute;
+    top: 4%;
 }

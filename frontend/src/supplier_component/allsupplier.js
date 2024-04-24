@@ -67,7 +67,7 @@ const getData = (searchbtn)=>{
     <body className='supplier_background'>
         <div className="container">
             <input
-              className="srchinput"
+              id="srchinput"
               type="search"
               onChange={(e)=>setSearchBtn(e.target.value)}
               placeholder="Search"
