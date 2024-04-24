@@ -71,6 +71,7 @@ function UpdateSupplier() {
 
     return (
         <div>
+            <body className='supplier_background'>
             <br />
             <div className="update-container-form">
                 <div className="mb-3">
@@ -215,6 +216,7 @@ function UpdateSupplier() {
                 </button></center>
 
             </div>
+            </body>
         </div>
     )
 }
