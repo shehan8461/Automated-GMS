@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from "axios"
-import './customer_dashboard.css'
+import './dashboard.css'
+
 
 function UserDashBoard(){
     const [countlist,setcountlist]=useState([]);
@@ -33,7 +34,10 @@ useEffect(()=>{
 
 
     return(
-        <div>
+        <div className='dashboard'>
+            <div id="cstomer-dashboard">
+              <body className='background-marketing'>
+                <div id="feedback-contain">
                   <h1>Total Feedbacks:</h1>
             {countlist !== null ? (
                 <p>Total Feedback: {countlist}
@@ -63,8 +67,9 @@ useEffect(()=>{
                 )
             })
            }
-
-
+</div>
+</body>
+</div>
         </div>
     )
 }
