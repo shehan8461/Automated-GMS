@@ -1,6 +1,6 @@
 /* Feedback Background */
 
-body::before {
+.background-marketing::before {
   content: "";
   position: absolute;
   top: 0;
@@ -10,7 +10,7 @@ body::before {
   background-image: url('./1000_F_284668187_ByJ1JJYOlqCuBRJYzhEtIZaBR2gg8ZbA.jpg');
   background-size: cover;
   background-position: center;
-  filter: blur(7px); /* Adjust the blur radius as needed */
+  filter: blur(10px); /* Adjust the blur radius as needed */
   z-index: -2; /* Ensure the background remains behind other content */
 }
 
