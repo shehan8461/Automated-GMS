@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import axios from "axios";
 import './addfeddback.css';
-import logo from './selyn-high-resolution-logo-transparent(2).png';
 
 function AddFeedback() {
     const [formdata, setformdata] = useState({
@@ -11,42 +10,46 @@ function AddFeedback() {
         L_type: "",
         F_type: "",
         F_description: "",
-        errorMessage: "" // Added for validation error message
+        errorMessage: "",
+      // Corrected name for validation error message
     });
 
-    const handleonchange = (e) => {
+    const handleOnChange = (e) => {
         const { value, name } = e.target;
         let errorMessage = "";
+    
 
         // Email validation
         if (name === "email") {
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailPattern.test(value)) {
                 errorMessage = "Please enter a valid email address";
-             
             }
         }
+
+   
 
         setformdata((prev) => ({
             ...prev,
             [name]: value,
-            errorMessage: errorMessage // Update error message for the field
+            errorMessage: errorMessage,
+         
         }));
     };
 
-    const handlesubmit = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         
         // Check if there are any validation errors
-        if (formdata.errorMessage) {
-            alert("Please correct the form errors.");
+        if (formdata.errorMessage || formdata.requiredMessage) {
+            alert("Please correct all form fields.");
             return;
         }
 
         try {
             const response = await axios.post("http://localhost:8080/create_feedback", formdata);
             console.log(response);
-            alert("Feedback submitted");
+            alert("Feedback submitted! Thank you for your feedback. Please check your email.");
 
             // Send thank you email
             await axios.post("http://localhost:8080/send-email_feedback", { email: formdata.email });
@@ -59,37 +62,37 @@ function AddFeedback() {
 
     return (
         <div>
-        <body className='background-marketing'>
-            <p className='navbarfeedback'>
-                <h3>Seylin Clothes (PVT)</h3>
-                <img src={logo} alt="Logo" />
-            </p>
-            <div className="adduser">
-                <form onSubmit={handlesubmit}>
-                    <label>Name:</label>
-                    <input type="text" id="name" name="name" onChange={handleonchange} /><br />
-                    <label>Email:</label>
-                    <input type="text" id="email" name="email" onChange={handleonchange} />
-                  
-                    {formdata.errorMessage && ( <span className="error">{formdata.errorMessage}</span> )}
-                    <br />
-                    <label>Last purchase date:</label>
-                    <input type="date" id="L_date" name="L_date" onChange={handleonchange} /><br />
-                    <label>Last purchase Item:</label>
-                    <input type="text" id="L_type" name="L_type" onChange={handleonchange} /><br />
-                    <label>Feedback Type (complain or suggestion):</label>
-                    <input type="text" id="F_type" name="F_type" onChange={handleonchange} /><br />
-                    <label>Description:</label>
-                    <textarea rows="4" cols="50" id="F_discription" name="F_discription" onChange={handleonchange} /><br />
+            <body className='background-marketing'>
+                <div className="adduser">
+                    <form onSubmit={handleSubmit}>
+                        <label>Name:</label>
+                        <input type="text" id="name" name="name" onChange={handleOnChange} />
+                       
+                        <br />
+                        <label>Email:</label>
+                        <input type="text" id="email" name="email" onChange={handleOnChange} />
+                        {formdata.errorMessage && ( <span className="error-message">{formdata.errorMessage}</span> )}
+                        <br />
+                        <label>Last purchase date:</label>
+                        <input type="date" id="L_date" name="L_date" onChange={handleOnChange} /><br />
+                        <label>Last purchase Item:</label>
+                        <input type="text" id="L_type" name="L_type" onChange={handleOnChange} /><br />
 
-                    <br />
-                    <button type="submit">Submit</button>
-                </form>
+                        <label>Feedback Type:</label>
+                        <select id="F_type" name="F_type" onChange={handleOnChange}>
+                            <option>Complain</option>
+                            <option>Suggestion</option>
+                        </select><br /><br />
+                    
+                        <label>Description:</label>
+                        <textarea rows="4" cols="50" id="F_description" name="F_description" onChange={handleOnChange} /><br />
+
+                        <br />
+                        <button type="submit">Submit</button>
+                    </form>
                 </div>
-                </body>
-                
-            </div>
-      
+            </body>
+        </div>
     );
 }
 

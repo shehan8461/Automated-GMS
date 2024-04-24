@@ -32,7 +32,7 @@ const handledelete= async(id)=>{
     if(data.data.success){
         getfetchdata()
         console.log(data.data.message)
-        alert("Deleted User Successfully!")
+        alert("Removed Feddback!")
     }
 }
 
@@ -86,7 +86,7 @@ return(
                                      
                                       <td>
                                         
-                                        <button onClick={()=>handledelete(e1._id)}>delete</button>
+                                        <button onClick={()=>handledelete(e1._id)}>delete Feedback</button>
                                       </td>
                                     </tr>
                                 )
