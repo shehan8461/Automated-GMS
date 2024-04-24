@@ -64,6 +64,7 @@ const getData = (searchbtn)=>{
 
     return(
 <div>
+    <body className='supplier_background'>
         <div className="container">
             <input
               className="srchinput"
@@ -131,6 +132,7 @@ const getData = (searchbtn)=>{
             <button onClick={generatePDF} className="reportbtn" type="submit">
               Generate Report 
             </button>
+            </body>
 </div>
     )
 }

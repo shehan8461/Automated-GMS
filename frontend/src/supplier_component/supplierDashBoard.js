@@ -22,6 +22,7 @@ useEffect(()=>{
 
 return(
     <div>
+        <body className='supplier_background'>
         <h1>Total Suppliers:</h1>
             {countlist !== null ? (
                 <p>Total suppliers: {countlist}</p>
@@ -40,6 +41,7 @@ return(
                 )
             })
            }
+           </body>
     </div>
 )
 

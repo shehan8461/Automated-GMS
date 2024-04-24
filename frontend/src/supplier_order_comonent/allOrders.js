@@ -56,6 +56,7 @@ const getData = (searchbtn)=>{
 
     return(
 <div>
+    <body className='supplier_background'>
         <div className="container">
             <input
               className="srchinput"
@@ -106,6 +107,7 @@ const getData = (searchbtn)=>{
                             }
                         </tbody>
             </table>
+            </body>
 </div>
     )
 }
