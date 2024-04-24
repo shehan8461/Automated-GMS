@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from "axios";
-import './addfeddback.css';
+import './adduser.css';
+
 
 function AddFeedback() {
     const [formdata, setformdata] = useState({
