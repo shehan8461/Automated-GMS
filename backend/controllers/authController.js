@@ -1,6 +1,6 @@
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const User = require("../models/User");
 const USER_ROLES = require("../constants/roles_OM");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
