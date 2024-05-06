@@ -47,6 +47,43 @@ router.get("/user_supplier/:id", async (req, res) => {
 });
 
 
+//sending message to email
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+
+router.use(bodyParser.json());
+
+// Define your endpoint for sending emails
+router.post('/send-email-supplier', async (req, res) => {
+  try {
+    const { email } = req.body;
+
+   console.log(email+"==========================");
+
+    // Create a Nodemailer transporter
+    let transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'ruwanyahettiarachchi@gmail.com',
+        pass: 'ltzn jamh brzq tkap'
+      }
+    });
+
+    // Send a thank you email
+    await transporter.sendMail({
+      from: 'ruwanyahettiarachchi@gmail.com',
+      to: email,
+      subject: 'Thank You for connecting with Selyn!',
+      text: 'Dear supplier, You have been added as an supplier to our system.'
+    });
+
+    res.status(200).json({ message: 'Email sent successfully' });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 
 
 //get count in suppliers table

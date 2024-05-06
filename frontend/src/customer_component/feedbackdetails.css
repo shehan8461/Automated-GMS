@@ -12,7 +12,8 @@
   
   /* Table Styles */
   table {
-  
+  position: absolute;
+  top:25%;
 
   
     border-collapse: collapse;
@@ -66,7 +67,7 @@
 
   }
   .searchbtn{
-    margin-left: 90%;
+    margin-left: 80%;
     
   }
   .in {

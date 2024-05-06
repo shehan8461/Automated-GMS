@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from "axios";
-import './adduser.css';
+import './addfeddback.css';
 import logo from './selyn-high-resolution-logo-transparent(2).png';
 
 function AddFeedback() {
@@ -58,7 +58,8 @@ function AddFeedback() {
     };
 
     return (
-        <body className='feedback-background'>
+        <div>
+        <body className='background-marketing'>
             <p className='navbarfeedback'>
                 <h3>Seylin Clothes (PVT)</h3>
                 <img src={logo} alt="Logo" />
@@ -84,8 +85,11 @@ function AddFeedback() {
                     <br />
                     <button type="submit">Submit</button>
                 </form>
+                </div>
+                </body>
+                
             </div>
-        </body>
+      
     );
 }
 

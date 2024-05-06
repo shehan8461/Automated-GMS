@@ -10,7 +10,7 @@ function MainPage(){
         <nav>
         <ul>
             <a href="/marketing"><li>Marketing Management</li> </a>
-            <a href="/"><li>Supplier Management</li> </a> 
+            <a href="/count"><li>Supplier Management</li> </a> 
              <a href="/"><li> Management</li> </a> 
              <a href="/"><li> Management</li> </a> 
              <a href="/"><li> Management</li> </a> 
