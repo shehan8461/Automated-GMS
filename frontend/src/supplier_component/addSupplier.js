@@ -6,6 +6,7 @@ function AddSupplier() {
     const [formdata, setformdata] = useState({
         name: "",
         phone: "",
+        email: "",
         product: "",
         type: "",
         unitPrice: "",
@@ -98,6 +99,12 @@ function AddSupplier() {
                 const response = await axios.post("http://localhost:8080/create_supplier", formdata);
                 console.log(response.data);
                 alert("Data added successfully!");
+
+                
+  // Send thank you email
+            await axios.post("http://localhost:8080/send-email-supplier", { email: formdata.email });
+            console.log("Thank you email sent to:", formdata.email);
+
             } catch (error) {
                 console.error("Error adding data:", error);
                 alert("An error occurred while adding data");
@@ -146,6 +153,22 @@ function AddSupplier() {
                             onChange={handleOnChange}
                         />
                         {errors.phone && <span className="text-danger">{errors.phone}</span>}
+                    </div>
+
+                    <div className="mb-3">
+                    <br></br><label htmlFor="email" className="form-label">
+                            Supplier E-mail Address :
+                        </label>
+                        <br />
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="email"
+                            name="email"
+                            placeholder="someone@abc.com"
+                            onChange={handleOnChange}
+                        />
+                        {/* {errors.phone && <span className="text-danger">{errors.phone}</span>} */}
                     </div>
                     
                     <div className="mb-3">
