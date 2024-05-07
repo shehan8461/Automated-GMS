@@ -12,7 +12,8 @@ function NavBar(){
   <a href="/allSupplier">All Suppliers</a>
   <a href="/adduser">Add New Supplier</a>
   <a href="/allorders">Placed Orders</a>
-
+  <a href="/supplierui">Supplier UI page</a>
+  
   <br></br>
   
 <button className='logoutBtn'>Logout</button>
