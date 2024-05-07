@@ -1,0 +1,39 @@
+.supplierUI_background {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container_supUI {
+    position: relative;
+    margin-top: 400px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #92d0ed;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+h1 {
+    text-align: center;
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.accept {
+    background-color: #4caf50;
+    color: #fff;
+}
+.reject {
+    background-color: #f44336;
+    color: #fff;
+}

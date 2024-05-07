@@ -108,6 +108,22 @@ function UpdateSupplier() {
                 <br />
 
                 <div className="mb-3">
+                    <br></br><label htmlFor="email" className="form-label">
+                            Supplier E-mail Address :
+                        </label>
+                        <br />
+                        <input
+                            type="text"
+                            className="update-form-control"
+                            id="email"
+                            name="email"
+                            placeholder="someone@abc.com"
+                            onChange={handleInputChange}
+                        />
+                        
+                    </div>
+
+                <div className="mb-3">
                     <label htmlFor="product" className="update-form-label">
                         Product category
                     </label>

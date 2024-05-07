@@ -24,6 +24,7 @@ import PlaceOrder from './supplier_order_comonent/placeOrder';
 import AllOrders from './supplier_order_comonent/allOrders';
 import UpdateOrder from './supplier_order_comonent/updateOrder';
 import NavBar from './supplier_component/NavBar';
+import SupplierUI from './supplierUI_component/supplierUI';
 
 
 
@@ -64,7 +65,7 @@ function App() {
      <Route path="/order/:id" element={<div> <NavBar/> <PlaceOrder/></div>}></Route>
      <Route path="/allorders" element={<div> <NavBar/> <AllOrders/></div>}></Route>
      <Route path="/updateorder/:id" element={<div> <NavBar/> <UpdateOrder/></div>}></Route>
-  
+     <Route path="/supplierui" element={ <SupplierUI/>}></Route>
    
       </Routes>
     
