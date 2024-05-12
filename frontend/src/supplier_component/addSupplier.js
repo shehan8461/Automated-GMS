@@ -32,32 +32,47 @@ function AddSupplier() {
 
     const validateField = (fieldName, value) => {
         const fieldErrors = {};
-
+    
         // Validation rules for the specific field
         switch (fieldName) {
             case 'name':
+                // Validation rules for the name field
                 if (!value.trim()) {
                     fieldErrors.name = "Supplier name is required";
+                } else if (!/^[a-zA-Z\s]+$/.test(value)) {
+                    fieldErrors.name = "Invalid format";
                 }
                 break;
             case 'phone':
+                // Validation rules for the phone field
                 if (!value.trim()) {
                     fieldErrors.phone = "Supplier contact number is required";
                 } else if (!/^\d{3}-\d{7}$/.test(value)) {
                     fieldErrors.phone = "Invalid phone number format (e.g., XXX-XXXXXXX)";
                 }
                 break;
+            case 'email':
+                // Validation rules for the email field
+                if (!value.trim()) {
+                    fieldErrors.email = "Supplier email address is required";
+                } else if (!/\S+@\S+\.\S+/.test(value)) {
+                    fieldErrors.email = "Invalid email address format";
+                }
+                break;
             case 'product':
+                // Validation rules for the product field
                 if (!value.trim()) {
                     fieldErrors.product = "Product category is required";
                 }
                 break;
             case 'type':
+                // Validation rules for the type field
                 if (!value.trim()) {
                     fieldErrors.type = "Type of product supplied is required";
                 }
                 break;
             case 'unitPrice':
+                // Validation rules for the unitPrice field
                 if (!value.trim()) {
                     fieldErrors.unitPrice = "Price per unit is required";
                 } else if (!/^\d+(\.\d{1,2})?$/.test(value)) {
@@ -65,21 +80,26 @@ function AddSupplier() {
                 }
                 break;
             case 'contractStart':
+                // Validation rules for the contractStart field
                 if (!value) {
                     fieldErrors.contractStart = "Contract start date is required";
                 }
                 break;
             case 'contractEnd':
+                // Validation rules for the contractEnd field
                 if (!value) {
                     fieldErrors.contractEnd = "Contract end date is required";
+                } else if (value <= formdata.contractStart) {
+                    fieldErrors.contractEnd = "Contract end date must be after the contract start date";
                 }
                 break;
             default:
                 break;
         }
-
+    
         return fieldErrors;
     };
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -168,7 +188,7 @@ function AddSupplier() {
                             placeholder="someone@abc.com"
                             onChange={handleOnChange}
                         />
-                        {/* {errors.phone && <span className="text-danger">{errors.phone}</span>} */}
+                        {errors.email && <span className="text-danger">{errors.email}</span>}
                     </div>
                     
                     <div className="mb-3">
