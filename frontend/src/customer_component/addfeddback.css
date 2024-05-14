@@ -47,14 +47,14 @@
 }
 
 /* Form Container Styles */
-.adduser {
+.addfeedback {
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.8); /* Adding some opacity to make the form stand out */
+  background-color: rgba(243, 247, 255, 0.8); /* Adding some opacity to make the form stand out */
   position: relative; /* Ensure the form is stacked above the blurred background */
   z-index: 1; /* Ensure the form is stacked above the blurred background */
 }
@@ -98,4 +98,22 @@ button:hover {
 }
 .error-message {
   color: red;
+}
+.alert-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f8d7da; /* Red background color */
+  color: #721c24; /* Dark red text color */
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: center;
+}
+
+.alert-image {
+  max-width: 50px; /* Adjust image size as needed */
+  margin-bottom: 10px; /* Add some space below the image */
 }
