@@ -124,7 +124,7 @@ function AddFeedbackk({ updateFeedbackList }) {
                     </select><br /><br />
                 
                     <label>Description:</label>
-                    <textarea rows="4" cols="50" id="F_description" name="F_description" placeholder='description' onChange={handleOnChange} />
+                    <textarea rows="4" cols="50" id="F_discription" name="F_discription" placeholder='description' onChange={handleOnChange} />
                     {formdata.F_descriptionError && <span className="error-message">{formdata.F_descriptionError}</span>}
                     <br /><br></br>
 

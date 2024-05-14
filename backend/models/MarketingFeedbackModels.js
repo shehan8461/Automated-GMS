@@ -6,7 +6,7 @@ const formschema=mongoose.Schema({
     L_date:String,
     L_type:String,
    F_type:String,
-   F_discription:String,
+   F_description:String,
   
    
 

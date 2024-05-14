@@ -15,7 +15,11 @@
   .add-discount label {
     margin-bottom: 5px;
   }
-  
+  .error {
+    color: red;
+    font-size: 0.8em;
+}
+
   .add-discount input[type="text"] {
     padding: 8px;
     margin-bottom: 10px;
