@@ -87,6 +87,20 @@ function App() {
      <Route path="/updateorder/:id" element={<div> <NavBar/> <UpdateOrder/></div>}></Route>
      <Route path="/supplierui" element={ <SupplierUI/>}></Route>
    
+   
+      {/*Transport Management Routes */}
+      <Route path='/transports' element={<Home/>} />
+      <Route path='/transports/create' element={<CreateTransports/>} />
+      <Route path='/transports/details/:id' element={<ShowTransport/>} />
+      <Route path='/transports/edit/:id' element={<EditTrasnport/>} />
+      <Route path='/transports/delete/:id' element={<DeleteTransport/>} />
+      <Route path='/financial' element={<TransportFinancial/>}/>
+
+      <Route path='/vehicles' element={<VehicleHome/>} />
+      <Route path='/vehicles/create' element={<CreateVehicles/>} />
+      <Route path='/vehicles/details/:id' element={<ShowVehicle/>} />
+      <Route path='/vehicles/edit/:id' element={<EditVehicle/>} />
+      <Route path='/vehicles/delete/:id' element={<DeleteVehicle/>} />
       </Routes>
     
    
