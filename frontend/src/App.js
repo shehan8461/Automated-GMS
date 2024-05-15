@@ -1,5 +1,16 @@
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 
+import Home from './Transport_component/Home';
+import CreateTransports from './Transport_component/CreateTransports';
+import DeleteTransport from './Transport_component/DeleteTransport';
+import EditTrasnport from './Transport_component/EditTransport';
+import ShowTransport from './Transport_component/ShowTransport';
+import VehicleHome from './Transport_component/VehicleHome';
+import CreateVehicles from './Transport_component/CreateVehicle';
+import ShowVehicle from './Transport_component/showVehicles';
+import EditVehicle from './Transport_component/EditVehicle';
+import DeleteVehicle from './Transport_component/DeleteVehicle';
+import TransportFinancial from './Transport_component/TransportFinancial';
 
 import FeedbackDetails from './customer_component/feedbackdetails';
 import AddFeedback from './customer_component/addfeedback';
