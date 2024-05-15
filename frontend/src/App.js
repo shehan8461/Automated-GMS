@@ -28,9 +28,7 @@ import SupplierUI from './supplierUI_component/supplierUI';
 
 
 
-import InsertNewInventory from "./Inventory_component/InsertNewInventory.jsx"
-import UpdateInventory from "./Inventory_component/UpdateInventory.jsx"
-import AllInventory from './Inventory_component/AllInventory.jsx';
+
 // import DeductInventory from './Inventory_component/DeductInventory.jsx';
 // import DeductList from './Inventory_component/DeductList.jsx';
 
