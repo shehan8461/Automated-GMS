@@ -8,12 +8,15 @@ function UpdateSupplier() {
     const [supplierData, setsupplierData] = useState({
         name: "",
         phone: "",
+        email: "",
         product: "",
         type: "",
         unitPrice: "",
         contractStart: "",
         contractEnd: "",
     });
+
+    const [errors, setErrors] = useState({});
 
     useEffect(() => {
         const fetchSupplierData = async () => {
@@ -36,36 +39,118 @@ function UpdateSupplier() {
     }, []);
 
     const handleInputChange = (e) => {
+        const { value, name } = e.target;
         setsupplierData({
             ...supplierData,
-            [e.target.name]: e.target.value,
+            [name]: value,
         });
+
+        const fieldErrors = validateField(name, value);
+        setErrors((prev) => ({
+            ...prev,
+            [name]: fieldErrors[name]
+        }));
+    };
+
+    const validateField = (fieldName, value) => {
+        const fieldErrors = {};
+    
+        // Validation rules for the specific field
+        switch (fieldName) {
+            case 'name':
+                if (!value.trim()) {
+                    fieldErrors.name = "Supplier name is required";
+                } else if (!/^[a-zA-Z\s]+$/.test(value)) {
+                    fieldErrors.name = "Invalid format";
+                }
+                break;
+            case 'phone':
+                if (!value.trim()) {
+                    fieldErrors.phone = "Supplier contact number is required";
+                } else if (!/^\d{3}-\d{7}$/.test(value)) {
+                    fieldErrors.phone = "Invalid phone number format (e.g., XXX-XXXXXXX)";
+                }
+                break;
+            case 'email':
+                if (!value.trim()) {
+                    fieldErrors.email = "Supplier email address is required";
+                } else if (!/\S+@\S+\.\S+/.test(value)) {
+                    fieldErrors.email = "Invalid email address format";
+                }
+                break;
+            case 'product':
+                if (!value.trim()) {
+                    fieldErrors.product = "Product category is required";
+                }
+                break;
+            case 'type':
+                if (!value.trim()) {
+                    fieldErrors.type = "Type of product supplied is required";
+                }
+                break;
+            case 'unitPrice':
+                if (!value.trim()) {
+                    fieldErrors.unitPrice = "Price per unit is required";
+                } else if (!/^\d+(\.\d{1,2})?$/.test(value)) {
+                    fieldErrors.unitPrice = "Invalid price format";
+                }
+                break;
+            case 'contractStart':
+                if (!value) {
+                    fieldErrors.contractStart = "Contract start date is required";
+                }
+                break;
+            case 'contractEnd':
+                if (!value) {
+                    fieldErrors.contractEnd = "Contract end date is required";
+                } else if (value <= supplierData.contractStart) {
+                    fieldErrors.contractEnd = "Contract end date must be after the contract start date";
+                }
+                break;
+            default:
+                break;
+        }
+    
+        return fieldErrors;
     };
 
     const handleUpdate = async () => {
-        try {
-            const response = await fetch(`http://localhost:8080/update_supplier`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    id: supplierData._id,
-                    ...supplierData,
-                }),
-            });
-
-            const data = await response.json();
-
-            if (data.success) {
-                console.log('User updated successfully');
-                alert("Data updated successfully!");
-            } else {
-                console.error(data.message);
+        const formErrors = {};
+        
+        // Validate all fields before submitting the form
+        Object.keys(supplierData).forEach((key) => {
+            const fieldErrors = validateField(key, supplierData[key]);
+            if (Object.keys(fieldErrors).length > 0) {
+                formErrors[key] = fieldErrors[key];
             }
-        } catch (error) {
-            console.error('Error updating user:', error);
-            alert("Error updating successfully!");
+        });
+        setErrors(formErrors);
+
+        if (Object.keys(formErrors).length === 0) {
+            try {
+                const response = await fetch(`http://localhost:8080/update_supplier`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        id: supplierData._id,
+                        ...supplierData,
+                    }),
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    console.log('User updated successfully');
+                    alert("Data updated successfully!");
+                } else {
+                    console.error(data.message);
+                }
+            } catch (error) {
+                console.error('Error updating user:', error);
+                alert("Error updating successfully!");
+            }
         }
     };
 
@@ -88,6 +173,7 @@ function UpdateSupplier() {
                         onChange={handleInputChange}
                         value={supplierData?.name}
                     />
+                    {errors.name && <span className="text-danger">{errors.name}</span>}
                 </div>
 
                 <div className="mb-3">
@@ -104,8 +190,25 @@ function UpdateSupplier() {
                         onChange={handleInputChange}
                         value={supplierData?.phone}
                     />
+                    {errors.phone && <span className="text-danger">{errors.phone}</span>}
                 </div>
-                <br />
+
+                <div className="mb-3">
+                    <label htmlFor="email" className="update-form-label">
+                        Supplier E-mail Address :
+                    </label>
+                    <br />
+                    <input
+                        type="text"
+                        className="update-form-control"
+                        id="email"
+                        name="email"
+                        placeholder="someone@abc.com"
+                        onChange={handleInputChange}
+                        value={supplierData?.email}
+                    />
+                    {errors.email && <span className="text-danger">{errors.email}</span>}
+                </div>
 
                 <div className="mb-3">
                     <label htmlFor="product" className="update-form-label">
@@ -135,9 +238,8 @@ function UpdateSupplier() {
                         <option value="glue">Glues</option>
                         <option value="lableTag">Labels and Tags</option>
                     </select>
+                    {errors.product && <span className="text-danger">{errors.product}</span>}
                 </div>
-
-                <br />
 
                 <div className="mb-3">
                     <label htmlFor="type" className="update-form-label">
@@ -155,9 +257,8 @@ function UpdateSupplier() {
                         <option value="local">Local</option>
                         <option value="imported">Imported</option>
                     </select>
+                    {errors.type && <span className="text-danger">{errors.type}</span>}
                 </div>
-
-                <br />
 
                 <div className="mb-3">
                     <label htmlFor="unitPrice" className="update-form-label">
@@ -173,6 +274,7 @@ function UpdateSupplier() {
                         onChange={handleInputChange}
                         value={supplierData?.unitPrice}
                     />
+                    {errors.unitPrice && <span className="text-danger">{errors.unitPrice}</span>}
                 </div>
 
                 <div className="mb-3">
@@ -181,17 +283,15 @@ function UpdateSupplier() {
                     </label>
                     <br />
                     <input
-                        type="text"
+                        type="date"
                         className="update-form-control"
                         id="contractStart"
                         name="contractStart"
-                        placeholder="dd/mm/yyyy"
                         onChange={handleInputChange}
                         value={supplierData?.contractStart}
                     />
+                    {errors.contractStart && <span className="text-danger">{errors.contractStart}</span>}
                 </div>
-
-                <br />
 
                 <div className="mb-3">
                     <label htmlFor="contractEnd" className="update-form-label">
@@ -199,21 +299,23 @@ function UpdateSupplier() {
                     </label>
                     <br />
                     <input
-                        type="text"
+                        type="date"
                         className="update-form-control"
                         id="contractEnd"
                         name="contractEnd"
-                        placeholder="dd/mm/yyyy"
                         onChange={handleInputChange}
                         value={supplierData?.contractEnd}
                     />
+                    {errors.contractEnd && <span className="text-danger">{errors.contractEnd}</span>}
                 </div>
 
                 <br />
 
-                <center><button onClick={handleUpdate} className="update-btn-primary">
-                    Update
-                </button></center>
+                <center>
+                    <button onClick={handleUpdate} className="update-btn-primary">
+                        Update
+                    </button>
+                </center>
 
             </div>
             </body>

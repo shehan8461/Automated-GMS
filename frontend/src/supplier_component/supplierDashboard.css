@@ -1,0 +1,32 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.box {
+   
+    padding: 0px; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin-left: 100px;
+}
+
+h1 {
+    color: #007bff; 
+    margin-bottom: 10px; 
+}
+
+h2 {
+    color: #007bff; 
+    margin-top: 20px; 
+    margin-bottom: 10px; 
+}
+
+
+p {
+    color: #007bff; 
+    margin-bottom: 5px; 
+} 

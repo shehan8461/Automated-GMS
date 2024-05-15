@@ -67,7 +67,7 @@ const getData = (searchbtn)=>{
     <body className='supplier_background'>
         <div className="container">
             <input
-              className="srchinput"
+              id="srchinput"
               type="search"
               onChange={(e)=>setSearchBtn(e.target.value)}
               placeholder="Search"
@@ -88,6 +88,7 @@ const getData = (searchbtn)=>{
                         <tr>
                         <th>Name</th>
                         <th>Phone Number</th>
+                        <th>E-mail</th>
                         <th>Product</th>
                         <th>Type</th>
                         <th>Unit Price</th>
@@ -106,6 +107,7 @@ const getData = (searchbtn)=>{
                                     <tr> 
                                       <td> {e1.name}</td> 
                                       <td> {e1.phone}</td> 
+                                      <td> {e1.email}</td>
                                       <td> {e1.product}</td> 
                                       <td> {e1.type}</td>
                                       <td> {e1.unitPrice}</td>

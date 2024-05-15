@@ -3,6 +3,7 @@ const mongoose=require("mongoose");
 const dataschema=mongoose.Schema({
     name:String,
     phone:String,
+    email:String,
     product:String,
     type:String,
     unitPrice:Number,

@@ -1,5 +1,5 @@
 
-
+/*
 .supplier_background::before {
   content: '';
   position: fixed;
@@ -21,10 +21,12 @@
 
 
 table {
-  width: calc(100% - 250px); /* Adjusted width to accommodate the navigation bar */
+  position: relative;
+  width: calc(100% - 250px); 
   border-collapse: collapse;
   margin-top: 20px;
   margin-left: 230px;
+  margin-top: 80px;
 }
 
 th, td {
@@ -39,7 +41,7 @@ th {
 }
 
 td {
-  font-weight: bold; /* Make table data elements bold */
+  font-weight: bold;
 }
 
 tbody tr:hover {
@@ -59,10 +61,26 @@ button, .btn1{
   font-weight: bold; 
 }
 
+#srchinput{
+  position: absolute;
+  left: 60%;
+  width:20%;
+  right: 10%;
+  margin-top: 30px;
+}
+
+.srchbtn{
+  position: relative;
+  margin-left: 1100px;
+  height: 37px;
+  margin-top: 30px;
+}
+
 button:hover, .btn1:hover {
   background-color: #0bea1e;
   text-decoration: underline;
 }
+
 
 a {
   color: #fff;
@@ -73,12 +91,11 @@ a:hover {
   text-decoration: underline;
 }
 
-.srchinput{
-  margin-left: 1160px;
-}
+
 
 .reportbtn {
-  margin-left: 230px;
+  position: absolute;
+  margin-left: 1200px;
   margin-top: 20px;
   padding: 8px 16px;
   background-color: #2196f3;
@@ -90,3 +107,4 @@ a:hover {
 
 
 
+*/

@@ -1,6 +1,7 @@
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 
 
+
 import FeedbackDetails from './customer_component/feedbackdetails';
 import AddFeedback from './customer_component/addfeedback';
 
@@ -24,6 +25,23 @@ import PlaceOrder from './supplier_order_comonent/placeOrder';
 import AllOrders from './supplier_order_comonent/allOrders';
 import UpdateOrder from './supplier_order_comonent/updateOrder';
 import NavBar from './supplier_component/NavBar';
+import SupplierUI from './supplierUI_component/supplierUI';
+
+import Home from './Transport_component/Home';
+import CreateTransports from './Transport_component/CreateTransports';
+import DeleteTransport from './Transport_component/DeleteTransport';
+import EditTrasnport from './Transport_component/EditTransport';
+import ShowTransport from './Transport_component/ShowTransport';
+import VehicleHome from './Transport_component/VehicleHome';
+import CreateVehicles from './Transport_component/CreateVehicle';
+import ShowVehicle from './Transport_component/showVehicles';
+import EditVehicle from './Transport_component/EditVehicle';
+import DeleteVehicle from './Transport_component/DeleteVehicle';
+import TransportFinancial from './Transport_component/TransportFinancial';
+
+
+// import DeductInventory from './Inventory_component/DeductInventory.jsx';
+// import DeductList from './Inventory_component/DeductList.jsx';
 
 
 
@@ -67,11 +85,25 @@ function App() {
      <Route path="/order/:id" element={<div> <NavBar/> <PlaceOrder/></div>}></Route>
      <Route path="/allorders" element={<div> <NavBar/> <AllOrders/></div>}></Route>
      <Route path="/updateorder/:id" element={<div> <NavBar/> <UpdateOrder/></div>}></Route>
-  
+     <Route path="/supplierui" element={ <SupplierUI/>}></Route>
    
+   
+      {/*Transport Management Routes */}
+      <Route path='/transports' element={<Home/>} />
+      <Route path='/transports/create' element={<CreateTransports/>} />
+      <Route path='/transports/details/:id' element={<ShowTransport/>} />
+      <Route path='/transports/edit/:id' element={<EditTrasnport/>} />
+      <Route path='/transports/delete/:id' element={<DeleteTransport/>} />
+      <Route path='/financial' element={<TransportFinancial/>}/>
+
+      <Route path='/vehicles' element={<VehicleHome/>} />
+      <Route path='/vehicles/create' element={<CreateVehicles/>} />
+      <Route path='/vehicles/details/:id' element={<ShowVehicle/>} />
+      <Route path='/vehicles/edit/:id' element={<EditVehicle/>} />
+      <Route path='/vehicles/delete/:id' element={<DeleteVehicle/>} />
       </Routes>
     
- 
+   
     </div>
     </Router>
   );
