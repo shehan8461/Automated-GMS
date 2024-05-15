@@ -122,7 +122,7 @@ function AddDiscount() {
                         value={discount.dis}
                         onChange={handleOnChange}
                         onBlur={handleDisBlur}
-                        onFocus={handleDisFocus}
+                        onFocus={handleDisFocus}></input>
 
                     <button type="submit">Add Discount</button>
                 </form><br />
