@@ -1,0 +1,30 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navigation Bar Styles */
+  nav {
+    background-color: #333;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  
+  li {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  li:hover {
+    background-color: #555;
+  }
+  

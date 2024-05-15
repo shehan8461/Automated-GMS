@@ -43,7 +43,27 @@ async function getStock(req, res) {
     }
 }
 
+async function getStockById(req, res) {
+    try {
+        const { id } = req.params; 
+        const item = await Inventory.findById(id); // Find item by ID
+
+        if (!item) {
+            return res.status(404).send({ message: "Item not found" }); 
+        }
+
+        res.send(item); 
+        console.log("Item retrieved successfully");
+    } catch (error) {
+        console.error("Error retrieving item:", error); // Log the error for debugging
+        res.status(500).send({ message: "An error occurred", error }); 
+    }
+}
+
+
 async function updateStock(req, res) {
+    const id = req.params.id;
+  
     const { ProductName, value, quantity, minimumAmount, description, productCode } = req.body;
 
     try {
@@ -71,6 +91,7 @@ async function deleteStock(req, res) {
         await Inventory.findByIdAndDelete(id);
         res.send("Data deleted");
         console.log("Data deleted");
+        
     } catch (error) {
         res.status(500).send(error);
     }
@@ -108,5 +129,6 @@ module.exports = {
     getStock,
     updateStock,
     deleteStock,
-    deductStock
+    deductStock,
+    getStockById
 };
