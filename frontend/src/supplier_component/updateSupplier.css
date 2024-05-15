@@ -1,4 +1,4 @@
-/* updateSupplier.css */
+/* 
 
 .update-container-form {
   max-width: 500px;
@@ -6,9 +6,9 @@
   padding: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.73); /* Semi-transparent white background */
+  background-color: rgba(255, 255, 255, 0.73);
   margin-top: 50px;
-  backdrop-filter: blur(8px); /* Apply blur effect */
+  backdrop-filter: blur(8px); 
 }
 
 .update-container-form h2 {
@@ -22,7 +22,7 @@
   font-weight: bold;
   color: #007bff;
   font-size: 20px;
-  margin-bottom: 15px; /* Increased spacing between labels */
+  margin-bottom: 15px;
 }
 
 .update-form-control {
@@ -53,3 +53,4 @@
 .update-btn-primary:hover {
   background-color: #0056b3;
 }
+*/
