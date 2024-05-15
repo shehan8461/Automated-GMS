@@ -13,6 +13,7 @@
 #distable{
   position: absolute;
   top:80%;
+  left:3%
 }
 #cstomer-dashboard{
 background-color: rgb(100, 148, 202);
@@ -31,7 +32,7 @@ margin-left:40%;
 #discount-contain{
   border: 2px solid black;
 width:30%;
-margin-left:20%;
+margin-left:70%;
   top:3%;
 margin-left:35%;
 text-align: center;

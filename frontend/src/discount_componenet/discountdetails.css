@@ -1,8 +1,9 @@
 table {
   position: absolute;
- 
-  right: 10%;
-    width: 100%;
+ left:10%;
+ top:30%;
+  right: 5%;
+    width: 80%;
     border-collapse: collapse;
   }
   /* discountdetails.css */
@@ -64,6 +65,6 @@ table {
   }
   #datereport{
 position: absolute;
-    top:70%
+    top:90%
   }
   

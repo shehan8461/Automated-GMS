@@ -1,6 +1,7 @@
 require("dotenv").config();//added by Himansa
 const express=require("express")
 const cors=require("cors")
+const bodyParser = require("body-parser");//salini
 const mongoose=require("mongoose")
 const MarketingFeedbackRoutes = require("./routes/MarketingFeedbackRoutes");
 const MarketingDiscountRoutes = require("./routes/MarketingDiscuntRoutes");
@@ -78,3 +79,5 @@ mongoose.connect("mongodb+srv://seylincompany:seylin123@cluster0.zgjpnzd.mongodb
 }).catch((err)=>{
     console.log(err)
 })
+
+app.use(bodyParser.json());
