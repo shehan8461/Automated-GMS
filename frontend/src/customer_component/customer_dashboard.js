@@ -59,7 +59,7 @@ useEffect(()=>{
             userlist.map((e)=>{
                 return(
                
-                    <p> {e.F_discription}</p>
+                    <p> {e.F_description}</p>
 
                     
                     

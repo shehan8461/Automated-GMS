@@ -1,5 +1,5 @@
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
-import React from 'react';
+
 
 import FeedbackDetails from './customer_component/feedbackdetails';
 import AddFeedback from './customer_component/addfeedback';
@@ -49,6 +49,9 @@ function App() {
        
       <Route path="/" element={ <MainPage/>}> </Route>
 
+
+      
+
       {/* Marketing routes */}
       <Route path="/marketing"  element={<div><Header/> <UserDashBoard/><DiscountDashboard/> </div>}> </Route>
     
@@ -74,19 +77,10 @@ function App() {
      <Route path="/allorders" element={<div> <NavBar/> <AllOrders/></div>}></Route>
      <Route path="/updateorder/:id" element={<div> <NavBar/> <UpdateOrder/></div>}></Route>
      <Route path="/supplierui" element={ <SupplierUI/>}></Route>
-
-
-     {/* Inventory routes */}
-
-     <Route path="/AddStock" exact element={<InsertNewInventory/>}/>
-     <Route path="/Update/:id" exact element={<UpdateInventory/>}/>
-     <Route path="/Inventory" exact element={<AllInventory/>}/>
-     {/* <Route path="/Deduct" exact element={<DeductInventory/>}/>
-     <Route path="/DeductList" exact element={<DeductList/>}/> */}
    
       </Routes>
     
- 
+   
     </div>
     </Router>
   );
