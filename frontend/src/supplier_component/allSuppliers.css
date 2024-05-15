@@ -20,12 +20,12 @@
 
 
 
-table {
+.supplier_table {
   position: relative;
   width: calc(100% - 250px); 
   border-collapse: collapse;
   margin-top: 20px;
-  margin-left: 230px;
+  margin-left: 5px;
   margin-top: 80px;
 }
 
