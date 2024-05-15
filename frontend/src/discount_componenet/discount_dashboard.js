@@ -32,9 +32,9 @@ return(
          <body className='background-marketing'>
     <div className='dashboard'>
        <div id="discount-contain">
-  <h3>Total Discount Items:</h3>
+  <h3> Discount Items:</h3>
             {countlist !== null ? (
-                <p>Total Discount Items: {countlist}
+                <p><b>Total Discount Items: {countlist}</b>
                
               
                 </p>
@@ -52,7 +52,7 @@ return(
     
 
                   
-                         <table id="distable">
+                         <table id="discounttable">
                             <tr>
                             <th>Item</th>
                             <th>Discount Rate</th>

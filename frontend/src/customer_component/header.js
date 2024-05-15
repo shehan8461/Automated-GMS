@@ -7,7 +7,7 @@ function Header(){
         <nav>
         <ul>    
             <a href="/"><li>Home</li> </a>
-            <a href="/"><li>Dash Board</li> </a>
+            <a href="/marketing"><li>Dash Board</li> </a>
             <a href="/feedback_details"><li>Customer Feedback Details</li> </a> 
              <a href="/add_feedback"><li>Enter Feedback</li> </a> 
              <a href="/add_discount"><li>Add Discount</li> </a> 

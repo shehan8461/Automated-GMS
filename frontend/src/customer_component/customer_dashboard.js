@@ -34,13 +34,13 @@ useEffect(()=>{
 
 
     return(
-        <div className='dashboard'>
+        <div className='cstomer-dashboard'>
             <div id="cstomer-dashboard">
               <body className='background-marketing'>
                 <div id="feedback-contain">
-                  <h1>Total Feedbacks:</h1>
+         
             {countlist !== null ? (
-                <p>Total Feedback: {countlist}
+                <p> <b>Total Feedback:</b> <b>{countlist}</b><br></br>
                
               
                 </p>
@@ -51,15 +51,15 @@ useEffect(()=>{
           
                
             )}
-
-<h2> Customer Feedbacks :</h2>
+<br></br>
+<h2> <b>Customer Feedbacks :</b></h2><br></br>
  {
 
     
             userlist.map((e)=>{
                 return(
                
-                    <p> {e.F_description}</p>
+                    <p> <b>{e.F_description}</b></p>
 
                     
                     
