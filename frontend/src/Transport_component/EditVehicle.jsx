@@ -101,7 +101,7 @@ const EditVehicle = () => {
       <h1 style={{ fontSize: '1.5rem', margin: '1rem 0' }}>Edit Vehicle Details</h1>
       {loading ? <Spinner /> : ''}
       <div style={{ display: 'flex', flexDirection: 'column', border: '2px solid #4fd1c5', borderRadius: '10px', width: '600px', padding: '1rem', margin: '0 auto' }}>
-        <div className="my-4">
+        <div style={{ marginTop: '1rem',marginBottom: '1rem'}}>
           <label style={{ fontSize: '1.5rem', marginRight: '0.5rem', color: '#718096' }}>Year</label>
           <select
             value={year}
