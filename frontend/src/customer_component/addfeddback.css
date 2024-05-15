@@ -10,8 +10,7 @@
   background-image: url('./back.jpg');
   background-size: cover;
   background-position: center;
-  filter: blur(3px); /* Adjust the blur radius as needed */
-  z-index: -2; /* Ensure the background remains behind other content */
+
 }
 
 /* Navbar Feedback */
@@ -48,9 +47,8 @@
 
 /* Form Container Styles */
 .addfeedback {
- 
-  max-width: 700px;
-  height:600px;
+
+
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ddd;
