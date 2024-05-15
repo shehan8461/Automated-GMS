@@ -82,7 +82,7 @@ const getData = (searchbtn)=>{
             </div>
 
 <div ref={componentPDF} style={{width: '100%'}}>
-<table>
+<table className='supplier_table'>
     
               
                         <tr>
