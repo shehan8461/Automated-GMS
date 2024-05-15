@@ -52,6 +52,9 @@ function App() {
        
       <Route path="/" element={ <MainPage/>}> </Route>
 
+
+      
+
       {/* Marketing routes */}
       <Route path="/marketing"  element={<div><Header/> <UserDashBoard/><DiscountDashboard/> </div>}> </Route>
     
