@@ -123,8 +123,7 @@ function AddDiscount() {
                         onChange={handleOnChange}
                         onBlur={handleDisBlur}
                         onFocus={handleDisFocus}
-                    /><br />
-                    {errors.dis && <span className="error">{errors.dis}</span>}
+
                     <button type="submit">Add Discount</button>
                 </form><br />
                 <button id="dis-btn"><a href="discountdetails">Show Discount Items</a></button>
