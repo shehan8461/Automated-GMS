@@ -86,5 +86,9 @@
     border-radius: 0 4px 4px 0;
     cursor: pointer;
   }
+  #feedbacktable th{
+    background-color: #d4e6f3;
+    color: #031b34;
+  }
   
   
