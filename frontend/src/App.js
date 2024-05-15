@@ -1,5 +1,5 @@
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
-
+import React from 'react';
 
 import FeedbackDetails from './customer_component/feedbackdetails';
 import AddFeedback from './customer_component/addfeedback';
@@ -25,6 +25,14 @@ import AllOrders from './supplier_order_comonent/allOrders';
 import UpdateOrder from './supplier_order_comonent/updateOrder';
 import NavBar from './supplier_component/NavBar';
 import SupplierUI from './supplierUI_component/supplierUI';
+
+
+
+import InsertNewInventory from "./Inventory_component/InsertNewInventory.jsx"
+import UpdateInventory from "./Inventory_component/UpdateInventory.jsx"
+import AllInventory from './Inventory_component/AllInventory.jsx';
+// import DeductInventory from './Inventory_component/DeductInventory.jsx';
+// import DeductList from './Inventory_component/DeductList.jsx';
 
 
 
@@ -66,6 +74,15 @@ function App() {
      <Route path="/allorders" element={<div> <NavBar/> <AllOrders/></div>}></Route>
      <Route path="/updateorder/:id" element={<div> <NavBar/> <UpdateOrder/></div>}></Route>
      <Route path="/supplierui" element={ <SupplierUI/>}></Route>
+
+
+     {/* Inventory routes */}
+
+     <Route path="/AddStock" exact element={<InsertNewInventory/>}/>
+     <Route path="/Update/:id" exact element={<UpdateInventory/>}/>
+     <Route path="/Inventory" exact element={<AllInventory/>}/>
+     {/* <Route path="/Deduct" exact element={<DeductInventory/>}/>
+     <Route path="/DeductList" exact element={<DeductList/>}/> */}
    
       </Routes>
     
