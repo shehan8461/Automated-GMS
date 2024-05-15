@@ -102,12 +102,13 @@ function AddDiscount() {
             <div className='background-marketing'>
                 <form onSubmit={handleSubmit}>
                     <label>Item:</label>
-                    <input type="text" id="item" name="item" value={discount.item} onChange={handleOnChange} /><br />
+                    <input type="text" id="item" name="item" value={discount.item} onChange={handleOnChange}  placeholder="Item Name"/><br />
                     <label>Price:</label>
                     <input
                         type="text"
                         id="prize"
                         name="prize"
+                        placeholder="Price"
                         value={discount.prize}
                         onChange={handleOnChange}
                         onBlur={handlePrizeBlur}
@@ -119,6 +120,7 @@ function AddDiscount() {
                         type="text"
                         id="dis"
                         name="dis"
+                        placeholder="Discount"
                         value={discount.dis}
                         onChange={handleOnChange}
                         onBlur={handleDisBlur}
