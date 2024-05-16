@@ -67,7 +67,7 @@ const TransportFinancial = () => {
 <Spinner />
 ) : (
 <div ref={componentPDF} style={{ marginLeft: '20px', marginRight: '20px' }}><br></br>
-  <table style={{ width: '100%' }}>
+  <table style={{ width: '80%',marginLeft:'1%' }}>
     <thead>
       <tr style={{ backgroundColor: '#a2b9bc' }}>
         <th style={{ border: '1px solid black', padding: '0.5rem' }}>No</th>
