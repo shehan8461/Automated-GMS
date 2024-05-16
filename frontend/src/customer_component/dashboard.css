@@ -1,6 +1,6 @@
 
   /* Style the customer dashboard container */
-.dashboard {
+  .cstomer-dashboard {
     padding: 20px;
  
     border-radius: 10px;
@@ -10,9 +10,15 @@
   }
   
   /* Style the body background */
-#distable{
+#discounttable{
   position: absolute;
-  top:80%;
+  top:70%;
+  width: 80%;
+  right:10%;
+  background-color: rgb(190, 208, 228);
+}
+#discounttable th{
+  background-color: rgb(186, 206, 231);
 }
 #cstomer-dashboard{
 background-color: rgb(100, 148, 202);
@@ -28,10 +34,11 @@ margin-left:20%;
 top:3%;
 margin-left:40%;
 }
+
 #discount-contain{
   border: 2px solid black;
 width:30%;
-margin-left:20%;
+
   top:3%;
 margin-left:35%;
 text-align: center;
@@ -39,7 +46,9 @@ text-align: center;
   
   /* Style the headings */
   h1, h2 {
-    color: #100f0f; /* Choose your desired text color */
+    color: #000000;
+    margin-left: 0%;
+  /* Choose your desired text color */
   }
   
   /* Style the feedback count */

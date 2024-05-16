@@ -17,8 +17,9 @@ function SupplierUI(){
                     <h1>Hello Mr Saman. Welcome Back!</h1>
                     <div className="order-details">
                         <h2>Order Details</h2>
-                        <p>Customer: John Doe</p>
-                        <p>Order: Widget X</p>
+                        <p>Product: Elastics </p>
+                        <p>Order Amount: 500</p>
+                        <p>Order Date: 06/05/2024</p>
                     </div>
                     <div className="button-container">
                         <button className="button accept" onClick={handleAcceptClick}>Accept</button>

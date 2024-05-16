@@ -158,7 +158,7 @@ const Home = () => {
         <Spinner />
       ) : (
         <div ref={componentPDF} style={{ width: '100%' }}>
-          <table style={{ width: '95%' ,marginLeft:'10%',marginTop:'1%'}}>
+          <table style={{ width: '80%' ,marginLeft:'1%',marginTop:'1%'}}>
             <thead>
               <tr style={{ backgroundColor: '#a2b9bc' }}>
                 <th style={{ border: '1px solid black', padding: '10px' }}>No</th>

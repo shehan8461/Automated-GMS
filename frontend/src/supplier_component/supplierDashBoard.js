@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from "axios"
+import './supplierDashboard.css'
 
 
 function SupplierDashBoard(){
@@ -26,25 +27,45 @@ return(
         <body className='supplier_background'>
 
             <div className="box">
-        <h1>Total Suppliers:</h1>
+       
             {countlist !== null ? (
-                <p>Total suppliers: {countlist}</p>
+                <p id="cnt">Total suppliers: {countlist}</p>
                 
             ) : (
                 <p>Loading...
                      </p>  
             )}
-
-<h2> Supplier / Company Name :</h2>
- {   
-            supplierlist.map((e)=>{
+</div>
+<table id="supplierdashtable">
+                            <tr>
+                            <th>Supplier Name</th>
+                            <th>Product</th>
+                            <th>Unit Price</th>
+                            </tr>
+<tbody>
+    {
+supplierlist.map((e)=>{
                 return(
-               
-                    <p> {e.name}</p>                
+                            <tr>
+                                <td>
+                                {e.name} 
+                                </td>
+                                <td>
+                                {e.product}
+                                </td>
+                                <td>
+
+                                {e.unitPrice}
+
+                                </td>
+                            
+ 
+                            </tr>
                 )
-            })
-           }
-           </div>
+                              })
+}
+                            </tbody>
+                        </table>
            </body>
     </div>
 )

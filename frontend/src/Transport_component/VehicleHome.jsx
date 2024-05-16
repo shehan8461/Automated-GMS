@@ -81,7 +81,7 @@ const VehicleHome = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <table style={{ width: '95%' ,marginLeft:'12%',marginTop:'1%'}}>
+        <table style={{ width: '80%' ,marginLeft:'1%',marginTop:'1%'}}>
           <thead>
             <tr>
               <th style={{ padding: '5px', backgroundColor: '#6c757d', color: '#fff', border: '1px solid #dee2e6', textAlign: 'left'  }}>No</th>

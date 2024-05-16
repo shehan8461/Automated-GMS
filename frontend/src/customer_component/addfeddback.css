@@ -10,7 +10,8 @@
   background-image: url('./back.jpg');
   background-size: cover;
   background-position: center;
-
+  filter: blur(6px); /* Adjust the blur radius as needed */
+  z-index: -2; /* Ensure the background remains behind other content */
 }
 
 /* Navbar Feedback */
@@ -47,8 +48,7 @@
 
 /* Form Container Styles */
 .addfeedback {
-
-
+  max-width: 600px;
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ddd;
@@ -56,14 +56,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: rgba(243, 247, 255, 0.8); /* Adding some opacity to make the form stand out */
   position: relative; /* Ensure the form is stacked above the blurred background */
-  z-index: 3; /* Ensure the form is stacked above the blurred background */
+  z-index: 1; /* Ensure the form is stacked above the blurred background */
 }
 
 /* Label Styles */
 label {
   display: block;
-  margin-bottom: 22px;
-  margin-top: 10px;
+  margin-bottom: 8px;
   color: #333;
   font-weight: bold;
 }

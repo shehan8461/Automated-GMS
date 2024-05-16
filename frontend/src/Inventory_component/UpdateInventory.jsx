@@ -64,7 +64,7 @@ export default function UpdateInventory() {
       // };
 
       try {
-          await axios.put(`http://localhost:5050/stock/update_stock/${id}`, product);
+          await axios.put(`http://localhost:8080/stock/update_stock/${id}`, product);
           console.log('Product updated successfully');  
           alert('Product updated successfully');
           navigate('/Inventory')

@@ -8,9 +8,9 @@ function NavBar(){
           <a href="/">Home</a>
           <a href="/Inventory">All Inventory</a>
           <a href="/AddStock">Add Inventory</a>
-          <a href="/Update/:id">Update Inventory</a>
-          <a href="/Update/:id">About Us</a>
-          <a href="/Update/:id">Contact</a>
+          <a href="/UpdateStock/:id">Update Inventory</a>
+          <a href="/">About Us</a>
+          <a href="/">Contact</a>
         
           
         </div>
