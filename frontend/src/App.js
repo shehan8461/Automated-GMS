@@ -40,8 +40,9 @@ import DeleteVehicle from './Transport_component/DeleteVehicle';
 import TransportFinancial from './Transport_component/TransportFinancial';
 
 
-// import DeductInventory from './Inventory_component/DeductInventory.jsx';
-// import DeductList from './Inventory_component/DeductList.jsx';
+import InsertNewInventory from "./Inventory_component/InsertNewInventory.jsx"
+import UpdateInventory from "./Inventory_component/UpdateInventory.jsx"
+import AllInventory from './Inventory_component/AllInventory.jsx';
 
 
 
@@ -101,6 +102,13 @@ function App() {
       <Route path='/vehicles/details/:id' element={<ShowVehicle/>} />
       <Route path='/vehicles/edit/:id' element={<EditVehicle/>} />
       <Route path='/vehicles/delete/:id' element={<DeleteVehicle/>} />
+
+      {/* Invenory routes */}
+
+      <Route path="/AddStock" exact element={<InsertNewInventory/>}/>
+      <Route path="/UpdateStock/:id" exact element={<UpdateInventory/>}/>
+      <Route path="/Inventory" exact element={<AllInventory/>}/>
+
       </Routes>
     
    
