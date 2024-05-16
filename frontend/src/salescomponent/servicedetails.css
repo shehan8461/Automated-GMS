@@ -1,0 +1,87 @@
+.showoservices {
+  width: 80%;
+  margin-top: 5%;
+  margin-left: 15%;
+
+
+  background-image: url('images/grow.jpg'); /* Add the path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+
+
+ 
+}
+
+.searchbtn {
+  margin-bottom: 20px;
+
+}
+
+.in {
+  padding: 8px;
+  width: 200px;
+}
+
+#search-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color:black;
+  border: none;
+  cursor: pointer;
+}
+
+#search-btn:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.dback {
+  background-color: #f9f9f9;
+  padding: 8px;
+}
+
+.dback a, .dback button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.dback button{
+  background-color: red;
+  color: #fff;
+}
+.dback a:hover, .dback button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

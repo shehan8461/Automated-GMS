@@ -45,6 +45,11 @@ import UpdateInventory from "./Inventory_component/UpdateInventory.jsx"
 import AllInventory from './Inventory_component/AllInventory.jsx';
 
 
+import AddService from './salescomponent/addservice';
+import Servicedetails from './salescomponent/servicedetails';
+
+import UpdateService from './salescomponent/update_service';
+import  Headersales from './salescomponent/header';
 
 
 function App() {
@@ -109,6 +114,14 @@ function App() {
       <Route path="/UpdateStock/:id" exact element={<UpdateInventory/>}/>
       <Route path="/Inventory" exact element={<AllInventory/>}/>
 
+
+
+
+
+ 
+      <Route path='/sales' element={<div><Headersales/><AddService/></div>}></Route>
+<Route path='/details' element={<div><Headersales/><Servicedetails/></div>}></Route>
+<Route path='/update_service/:id' element={<div><Headersales/><UpdateService/></div>}></Route>
       </Routes>
     
    

@@ -1,0 +1,50 @@
+/* CSS for Service Update Form */
+
+.service-update {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+
+
+   
+  }
+  
+  .service-update label {
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .service-update input[type="text"],
+  .service-update input[type="date"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .service-update button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .service-update button:hover {
+    background-color: #0056b3;
+  }
+  
+  .update-page{
+    background-image: url('images/allsales.jpg'); /* Add the path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+   
+
+
+  }
