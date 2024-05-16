@@ -92,6 +92,9 @@ function AllSupplier() {
               <th>Unit Price</th>
               <th>Contract Start</th>
               <th>Contract End</th>
+              {showButtons && <th>Place Orders</th>} {/* Conditionally render 'Place Orders' column */}
+              {showButtons && <th>Update</th>} {/* Conditionally render 'Update' column */}
+              {showButtons && <th>Delete</th>} {/* Conditionally render 'Delete' column */}
             </tr>
           </thead>
           <tbody>
@@ -105,6 +108,25 @@ function AllSupplier() {
                 <td>{e1.unitPrice}</td>
                 <td>{e1.contractStart}</td>
                 <td>{e1.contractEnd}</td>
+                {showButtons && (
+                  <td>
+                    <a href={`/order/${e1._id}`} className='btn1'>
+                      Place Order
+                    </a>
+                  </td>
+                )}
+                {showButtons && (
+                  <td>
+                    <a href={`/update/${e1._id}`} className='btn1'>
+                      Update
+                    </a>
+                  </td>
+                )}
+                {showButtons && (
+                  <td>
+                    <button onClick={() => handleDelete(e1._id)}>Delete</button>
+                  </td>
+                )}
               </tr>
             ))}
           </tbody>
