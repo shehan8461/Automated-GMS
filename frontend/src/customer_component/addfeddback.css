@@ -1,3 +1,4 @@
+/* Feedback Background */
 
 .background-marketing::before {
   content: "";
@@ -9,11 +10,11 @@
   background-image: url('./back.jpg');
   background-size: cover;
   background-position: center;
-  filter: blur(6px); 
-  z-index: -2;
+  filter: blur(6px); /* Adjust the blur radius as needed */
+  z-index: -2; /* Ensure the background remains behind other content */
 }
 
-
+/* Navbar Feedback */
 .navbarfeedback {
   border: 2px solid blue;
   position: absolute;
@@ -38,26 +39,27 @@
  
 }
 
-
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
+/* Form Container Styles */
 .addfeedback {
-  max-width: 400px;
+  max-width: 600px;
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: rgba(243, 247, 255, 0.8); 
-  position: relative; 
-  z-index: 1; 
+  background-color: rgba(243, 247, 255, 0.8); /* Adding some opacity to make the form stand out */
+  position: relative; /* Ensure the form is stacked above the blurred background */
+  z-index: 1; /* Ensure the form is stacked above the blurred background */
 }
 
+/* Label Styles */
 label {
   display: block;
   margin-bottom: 8px;
@@ -65,6 +67,7 @@ label {
   font-weight: bold;
 }
 
+/* Input Styles */
 input {
   width: 100%;
   padding: 10px;
@@ -79,7 +82,7 @@ input:focus {
   border-color: #3498db;
 }
 
-
+/* Button Styles */
 button {
   background-color: #3498db;
   color: white;
@@ -101,8 +104,8 @@ button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f8d7da; 
-  color: #721c24;
+  background-color: #f8d7da; /* Red background color */
+  color: #721c24; /* Dark red text color */
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -111,6 +114,6 @@ button:hover {
 }
 
 .alert-image {
-  max-width: 50px; 
-  margin-bottom: 10px;
+  max-width: 50px; /* Adjust image size as needed */
+  margin-bottom: 10px; /* Add some space below the image */
 }

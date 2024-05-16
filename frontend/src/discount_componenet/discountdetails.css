@@ -1,8 +1,8 @@
-table {
+#discount-table{
   position: absolute;
- left:10%;
- top:30%;
-  right: 5%;
+ 
+ top:18%;
+  right: 10%;
     width: 80%;
     border-collapse: collapse;
   }
