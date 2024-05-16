@@ -61,7 +61,7 @@ function DiscountDetails() {
             <div className="background-marketing">
                 <div ref={componentPDF} style={{ width: '100%' }}>
                     <img src={logo} alt="logo" height="90px" width="96px" />
-                    <table>
+                    <table id="discount-table">
                         <thead>
                             <tr>
                                 <th>Item Name</th>

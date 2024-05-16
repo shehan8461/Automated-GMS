@@ -1,10 +1,13 @@
+
 .add-discount {
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
+ 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(243, 247, 255, 0.8); 
   }
   
   .add-discount form {
@@ -13,7 +16,7 @@
   }
   
   .add-discount label {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .error {
     color: red;

@@ -1,0 +1,59 @@
+/* CSS for Add Catering Service Form */
+
+.add-service {
+    max-width: 400px;
+    margin: 10%;
+    margin-left: 35%;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    
+  }
+  
+  .add-service h2 {
+    text-align: center;
+  }
+  
+  .add-service form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-service label {
+    margin-bottom: 5px;
+  }
+  
+  .add-service input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .add-service button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .add-service button:hover {
+    background-color: #45a049;
+  }
+  
+  /*my edit*/
+  .service-page{
+    background-image: url('images/my.jpg'); /* Add the path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+   
+  }
+
+
+ 
+
+

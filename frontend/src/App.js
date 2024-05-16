@@ -1,6 +1,7 @@
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 
 
+
 import FeedbackDetails from './customer_component/feedbackdetails';
 import AddFeedback from './customer_component/addfeedback';
 
@@ -26,7 +27,29 @@ import UpdateOrder from './supplier_order_comonent/updateOrder';
 import NavBar from './supplier_component/NavBar';
 import SupplierUI from './supplierUI_component/supplierUI';
 
+import Home from './Transport_component/Home';
+import CreateTransports from './Transport_component/CreateTransports';
+import DeleteTransport from './Transport_component/DeleteTransport';
+import EditTrasnport from './Transport_component/EditTransport';
+import ShowTransport from './Transport_component/ShowTransport';
+import VehicleHome from './Transport_component/VehicleHome';
+import CreateVehicles from './Transport_component/CreateVehicle';
+import ShowVehicle from './Transport_component/showVehicles';
+import EditVehicle from './Transport_component/EditVehicle';
+import DeleteVehicle from './Transport_component/DeleteVehicle';
+import TransportFinancial from './Transport_component/TransportFinancial';
 
+
+import InsertNewInventory from "./Inventory_component/InsertNewInventory.jsx"
+import UpdateInventory from "./Inventory_component/UpdateInventory.jsx"
+import AllInventory from './Inventory_component/AllInventory.jsx';
+
+
+import AddService from './salescomponent/addservice';
+import Servicedetails from './salescomponent/servicedetails';
+
+import UpdateService from './salescomponent/update_service';
+import  Headersales from './salescomponent/header';
 
 
 function App() {
@@ -40,6 +63,9 @@ function App() {
       <Routes>
        
       <Route path="/" element={ <MainPage/>}> </Route>
+
+
+      
 
       {/* Marketing routes */}
       <Route path="/marketing"  element={<div><Header/> <UserDashBoard/><DiscountDashboard/> </div>}> </Route>
@@ -67,9 +93,38 @@ function App() {
      <Route path="/updateorder/:id" element={<div> <NavBar/> <UpdateOrder/></div>}></Route>
      <Route path="/supplierui" element={ <SupplierUI/>}></Route>
    
+   
+      {/*Transport Management Routes */}
+      <Route path='/transports' element={<Home/>} />
+      <Route path='/transports/create' element={<CreateTransports/>} />
+      <Route path='/transports/details/:id' element={<ShowTransport/>} />
+      <Route path='/transports/edit/:id' element={<EditTrasnport/>} />
+      <Route path='/transports/delete/:id' element={<DeleteTransport/>} />
+      <Route path='/financial' element={<TransportFinancial/>}/>
+
+      <Route path='/vehicles' element={<VehicleHome/>} />
+      <Route path='/vehicles/create' element={<CreateVehicles/>} />
+      <Route path='/vehicles/details/:id' element={<ShowVehicle/>} />
+      <Route path='/vehicles/edit/:id' element={<EditVehicle/>} />
+      <Route path='/vehicles/delete/:id' element={<DeleteVehicle/>} />
+
+      {/* Invenory routes */}
+
+      <Route path="/AddStock" exact element={<InsertNewInventory/>}/>
+      <Route path="/UpdateStock/:id" exact element={<UpdateInventory/>}/>
+      <Route path="/Inventory" exact element={<AllInventory/>}/>
+
+
+
+
+
+ 
+      <Route path='/sales' element={<div><Headersales/><AddService/></div>}></Route>
+<Route path='/details' element={<div><Headersales/><Servicedetails/></div>}></Route>
+<Route path='/update_service/:id' element={<div><Headersales/><UpdateService/></div>}></Route>
       </Routes>
     
- 
+   
     </div>
     </Router>
   );
