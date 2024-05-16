@@ -21,11 +21,11 @@
 
 
 .supplier_table {
-  position: relative;
+  position: absolute;
   width: calc(100% - 250px); 
   border-collapse: collapse;
   margin-top: 20px;
-  margin-left: 5px;
+  left: 7px;
   margin-top: 80px;
 }
 
@@ -62,7 +62,7 @@ button, .btn1{
 }
 
 #srchinput{
-  position: absolute;
+  position: relative;
   left: 60%;
   width:20%;
   right: 10%;
@@ -71,7 +71,7 @@ button, .btn1{
 
 .srchbtn{
   position: relative;
-  margin-left: 1100px;
+  margin-left:1140px;
   height: 37px;
   margin-top: 30px;
 }
