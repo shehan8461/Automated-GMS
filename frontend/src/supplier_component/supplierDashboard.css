@@ -1,36 +1,29 @@
-/* CSS for SupplierDashBoard component */
 
-/* Container for centering */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Set the container height to viewport height for centering vertically */
+
+
+
+#cnt{
+    position: absolute;
+    left:50%;
+    top:15%;
+    font-size: large;
+    border:2px solid black;
+    padding: 20px;
+    border-radius: 5px;
 }
 
-/* Styling for the box */
-.box {
-   
-    padding: 0px; /* Add some padding for better readability */
-    border-radius: 10px; /* Add border radius for rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
-    margin-left: 100px;
-}
 
-/* Heading styles */
-h1 {
-    color: #007bff; /* Blue color for headings */
-    margin-bottom: 10px; /* Add some space below the heading */
-}
 
-h2 {
-    color: #007bff; /* Blue color for subheadings */
-    margin-top: 20px; /* Add some space above the subheading */
-    margin-bottom: 10px; /* Add some space below the subheading */
-}
 
-/* Paragraph styles */
-p {
-    color: #007bff; /* Blue color for paragraphs */
-    margin-bottom: 5px; /* Add some space below each paragraph */
+
+
+
+
+#supplierdashtable{
+    position: absolute;
+    top:20%;
+    left:2%;
+    right:4%;
+    width: 80%;;
+    background-color: rgb(189, 221, 249);
 }

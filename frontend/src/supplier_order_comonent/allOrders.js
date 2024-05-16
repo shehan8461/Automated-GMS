@@ -73,7 +73,7 @@ const getData = (searchbtn)=>{
             </button>
             </div>
 
-<table>
+<table className='supplier_table'>
               
                         <tr>
                         <th>Supplier Name</th>

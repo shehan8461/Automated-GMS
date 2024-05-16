@@ -1,40 +1,37 @@
+
 .add-discount {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: rgba(243, 247, 255, 0.8);
  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(243, 247, 255, 0.8); 
   }
   
   .add-discount form {
     display: flex;
     flex-direction: column;
-    padding-top: 0px;
   }
   
   .add-discount label {
-    margin-bottom: 20px;
-    margin-top: 10px;
-    
+    margin-bottom: 10px;
   }
   .error {
     color: red;
     font-size: 0.8em;
-  }
+}
 
   .add-discount input[type="text"] {
     padding: 8px;
-    margin-bottom: 20px;
-    margin-top: 15px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
   }
   
   .add-discount input[type="submit"] {
-    padding: 0px 0px;
+    padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
