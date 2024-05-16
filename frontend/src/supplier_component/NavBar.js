@@ -16,7 +16,7 @@ function NavBar(){
   
   <br></br>
   
-<button className='logoutBtn'>Logout</button>
+<a href="/"><button className='logoutBtn'>Logout</button></a>
   
 </div>
 
