@@ -1,4 +1,3 @@
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,7 +5,7 @@ body {
 }
 
 nav {
-  background-color: #333;
+  background-color: #d0eaf6;
   overflow: hidden;
 }
 
@@ -22,10 +21,11 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  color: white;
+  color: rgb(16, 16, 16);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-style: oblique;
 }
 
 nav ul li a:hover {
@@ -33,7 +33,8 @@ nav ul li a:hover {
 }
 
 .container {
-  padding: 20px;
+  padding: 100px;
+  position: relative;
 }
 
 .image-hover-container {
@@ -46,6 +47,7 @@ nav ul li a:hover {
   position: relative;
   width: 30%;
   margin: 10px;
+  cursor: pointer;
 }
 
 .image-hover img {
@@ -58,20 +60,122 @@ nav ul li a:hover {
 }
 
 .image-hover p {
+  display: none;
   position: absolute;
   bottom: 10px;
   left: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 5px;
+  width: 90%;
+}
+
+.image-hover.active p {
+  display: block;
+}
+
+.container h1 {
+  position: absolute;
+  top: 18%;
+  font-size: large;
+  font-style: italic;
+  left: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  width: 0;
+  animation: typing 5s steps(50, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+#more1 {
+  position: absolute;
+  top: 120%;
+  left: 78%;
+}
+
+#more2 {
+  position: absolute;
+  top: 125%;
+  left: 60%;
+}
+
+#more3 {
+  position: absolute;
+  top: 120%;
+  left: 40%;
+}
+
+#newarrivels {
+  position: absolute;
+  top: 125%;
+  font-size: large;
+  left: 1%;
+  border: 1px solid rgb(251, 251, 251);
+  background-color: rgb(251, 251, 251);
+  color: #111;
+  word-spacing: 18%;
+  text-align: center;
+  height: 150px;
+  letter-spacing: 5%;
+  text-decoration: dashed;
 }
 
 footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  top: 200%;
+  left: 0%;
   width: 100%;
+}
+
+.footer-content {
+  padding: 20px;
+}
+
+.footer-details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-details div {
+  margin: 10px;
+}
+
+.footer-details a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer-details a:hover {
+  text-decoration: underline;
+}
+
+
+.backgroundMain::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 240%;
+  background-image: url('');
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px); /* Adjust the blur radius as needed */
+  z-index: -2; /* Ensure the background remains behind other content */
 }
